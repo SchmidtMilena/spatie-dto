@@ -12,6 +12,6 @@ class UserRoleDTO extends DataTransferObject
     #[MapFrom('name')]
     public string $name;
 
-    #[MapFrom('user.id')]
-    public string $user_id;
+    #[MapFrom('someOtherParameter.parameter')]
+    public string $roleOtherParameter;
 }
