@@ -9,7 +9,6 @@ use Spatie\DataTransferObject\DataTransferObject;
 
 class UserRoleDTO extends DataTransferObject
 {
-    #[MapFrom('name')]
     public string $name;
 
     #[MapFrom('someOtherParameter.parameter')]

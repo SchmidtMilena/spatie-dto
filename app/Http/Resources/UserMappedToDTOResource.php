@@ -15,9 +15,10 @@ class UserMappedToDTOResource extends JsonResource
         $user = $this;
         return [
             'name' => $user->name,
-            'role' => $user->role,
-            'invoices' => UserInvoiceMappedToDTOResource::collection($user->invoices),
             'city' => $user->city,
+            'role_name' => $user->role->name,
+            'role_other_param' => $user->role->roleOtherParameter,
+            'user_invoices' => UserInvoiceMappedToDTOResource::collection($user->invoices),
         ];
     }
 }

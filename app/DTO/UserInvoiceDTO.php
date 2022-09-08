@@ -6,8 +6,10 @@ namespace App\DTO;
 
 use App\Validators\NumberBetween;
 use Spatie\DataTransferObject\DataTransferObject;
+use Spatie\DataTransferObject\Attributes\Strict;
 
-class UserInvoice extends DataTransferObject
+//#[Strict]
+class UserInvoiceDTO extends DataTransferObject
 {
     public int $id;
 

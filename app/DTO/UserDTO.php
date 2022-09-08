@@ -13,11 +13,11 @@ class UserDTO extends DataTransferObject
 {
     public string $name;
 
+    #[MapFrom('address.city.name')]
+    public string $city;
+
     public UserRoleDTO $role;
 
-    #[CastWith(ArrayCaster::class, itemType: UserInvoice::class)]
+    #[CastWith(ArrayCaster::class, itemType: UserInvoiceDTO::class)]
     public array $invoices;
-
-    #[MapFrom('address.city')]
-    public string $city;
 }
